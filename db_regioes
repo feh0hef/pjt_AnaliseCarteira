@@ -1,0 +1,17 @@
+'''
+Tabela com os dados da localidade
+'''
+
+#biblioteca
+import pandas as pd
+
+#Valores
+id_r = ['R1', 'R2', 'R3', 'R4', 'R5'] #ID da região
+regiao = ['Sul', 'Sudeste', 'Nordeste', 'Centro-Oeste', 'Norte'] #Região
+estado = ['Santa Catarina', 'São Paulo', 'Pernambuco', 'Mato Grosso do Sul', 'Acre'] #Estado
+sigla = ['SC', 'SP', 'PE', 'MS', 'AC'] #Sigla
+
+#Criar DataFrame
+lista_tuplas = list(zip(id_r, regiao, estado, sigla))
+
+regiao_df = pd.DataFrame(lista_tuplas)
