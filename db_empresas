@@ -1,0 +1,19 @@
+'''
+Tabela com informações gerais sobre a empresa
+'''
+
+#Biblioteca
+import pandas as pd
+
+#Valores
+id_e = ['E1', 'E2', 'E3', 'E4', 'E5'] #ID de cada empresa
+id_r = ['R1', 'R2', 'R3', 'R4', 'R5'] #ID da região
+id_i = ['C1', 'C2', 'C3', 'C4', 'C5'] #ID da carteira
+nome = ['EmpresaA', 'EmpresaB', 'EmpresaC', 'EmpresaD', 'EmpresaE'] #Empresas
+segmento = ['Varejo', 'Serviços', 'Serviços', 'Agricola', 'Industria'] #Segmento que atuam
+classificacao = ['B', 'AA', 'B', 'AA', 'AA'] #Classificação do relacionamento
+
+#Criar DataFrame
+lista_tuplas = list(zip(id_e, id_r, id_i, nome, segmento, classificacao))
+
+empresas_df = pd.DataFrame(lista_tuplas, columns=['ID empresa', 'ID região', 'ID Carteira', 'Nome empresa', 'Segmento', 'Relacionamento'])
