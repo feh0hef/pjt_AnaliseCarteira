@@ -1,0 +1,24 @@
+''''
+Tabela com informações sobre a carteira de cada empresa
+'''
+
+#bibliotecas
+import pandas as pd
+import numpy as np
+
+#Valores
+id_i = ['C1', 'C2', 'C3', 'C4', 'C5'] #ID da carteira
+id_a = ['A1', 'A2', 'A3', 'A4', 'A5'] #ID do conjunto de ativos atrelados
+capI = [3_000_000_000, 3_000_000_000, 5_000_000_000, 10_000_000_000, 7_500_000_000] #Capital Inicial Investido
+perfil = ['Conservador', 'Conservador', 'Moderado', 'Conservador', 'Moderado'] #perfil da carteira
+total_ativos = [6, 6, 10, 7, 10] #total de ativos na carteira
+inicio_op = ['2020-02-03', '2020-03-07', '2021-01-02', '2020-05-11', '2021-08-07'] #inicio da carteira
+frequencia = ['Mensal', 'Mensal', 'Mensal', 'Trimestral', 'Trimestral'] #Frequencia de aportes
+status = ['Ativo', 'Ativo', 'Ativo', 'Ativo', 'Ativo']
+
+#Criar DataFrame
+
+lista_tuplas = list(zip(id_a, id_i, capI, perfil, total_ativos, inicio_op, frequencia, status))
+
+carteira_df = pd.DataFrame(lista_tuplas, columns=['ID Carteira', 'ID Ativos', 'Capital Inicial', 'Perfil', 'Total de Ativos', 'Inicio da Operação', 'Aporte', 'Relacionamento'])
+carteira_df
